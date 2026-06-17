@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 7.1.12/21036
-// Filename: FDGDG.ggsk
-// Generated 2026-06-17T01:48:12
+// Filename: 
+// Generated 2026-06-17T01:56:52
 
 function pano2vrSkin(player,base) {
 	player.addVariable('opt_3d_preview', 2, true, { ignoreInState: 1  });
@@ -1687,7 +1687,7 @@ function pano2vrSkin(player,base) {
 			return player.getCurrentNode();
 		}
 		me._image_1.onclick=function (e) {
-				player.playSound("","1");
+				player.playPauseSound("_background","1");
 			me._image_2.style.transition='none';
 			me._image_2.style.visibility=(Number(me._image_2.style.opacity)>0||!me._image_2.style.opacity)?'inherit':'hidden';
 			me._image_2.ggVisible=true;
@@ -1749,6 +1749,7 @@ function pano2vrSkin(player,base) {
 		me.elementMouseOver['btn_close_popup_phone']=false;
 		el = me._thumbnail_menu_code;
 		;
+			player.playSound("_background","1");
 		player.addListener('activehotspotchanged', function(event) {
 			if (hotspotTemplates.hasOwnProperty('ht_node')) {
 				for(var i = 0; i < hotspotTemplates['ht_node'].length; i++) {
